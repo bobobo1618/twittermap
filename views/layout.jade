@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport", content="initial-scale=1.0, user-scalable=no")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://maps.googleapis.com/maps/api/js?sensor=true&libraries=visualization")
+    script(src="/javascripts/nite-overlay.js")
+    script(src="/socket.io/socket.io.js")
+  body
+    block content
+    
+    block javascript
+        script(type="text/javascript", src="/javascripts/main.js")
