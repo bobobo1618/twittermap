@@ -46,9 +46,9 @@ function initialize() {
         marker.setMap(map);
         console.log(marker);*/
         if(pointArray.getLength() < max){
-            pointArray.push(new google.maps.LatLng(data.geo.coordinates[0], data.geo.coordinates[1]));
+            pointArray.push(new google.maps.LatLng(data[1], data[0]));
         } else {
-            pointArray.setAt(index % max, new google.maps.LatLng(data.geo.coordinates[0], data.geo.coordinates[1]));
+            pointArray.setAt(index % max, new google.maps.LatLng(data[1], data[0]));
         }
         index++;
     })

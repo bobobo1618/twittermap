@@ -10,10 +10,10 @@ var http = require('http');
 var twitter = require('twitter');
 
 var twit = new twitter({
-    consumer_key: process.env.consumer_key,
-    consumer_secret: process.env.consumer_secret,
-    access_token_key: process.env.access_token_key,
-    access_token_secret: process.env.access_token_secret
+    consumer_key: "" || process.env.consumer_key,
+    consumer_secret: "" || process.env.consumer_secret,
+    access_token_key: "" || process.env.access_token_key,
+    access_token_secret: "" || process.env.access_token_secret
 })
 
 var app = express();
@@ -51,9 +51,9 @@ server.listen(app.get('port'), function(){
 
 twit.stream('statuses/filter', {locations: "-180,-90,180,90"}, function(stream){
     stream.on('data', function(data){
-    console.log(data);
-	if(data.geo){
-            io.sockets.emit('tweet', data);
+	if(data.coordinates){
+            console.log(data);
+            io.sockets.emit('tweet', data.coordinates.coordinates);
     	}
     });
 });
