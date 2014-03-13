@@ -1,5 +1,9 @@
 # Live Twitter Heatmap
 
+[Demo at https://maps-tweetmap.herokuapp.com/]
+
+Did this at a Google Maps workshop at the University of Melbourne.
+
 Streams Twitter public stream API through Node.js + Socket.io to Google's Maps V3 and makes a heatmap of the 400 most recent tweets (configure max in public/javascripts/main.js).
 
 Makes use of the nite-overlay by https://github.com/rossengeorgiev as well, for prettiness.
