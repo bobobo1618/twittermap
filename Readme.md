@@ -15,3 +15,9 @@ Requires Twitter API key as well as access token (get them from https://apps.twi
 `node app.js`
 
 Or just configure your environment variables on a Heroku app, enable WebSockets (`labs:enable websockets`) and run.
+
+## License
+
+[MIT Licensed](http://opensource.org/licenses/MIT) because I'm a cool guy.
+
+Dependencies may not share the license though, be careful.
